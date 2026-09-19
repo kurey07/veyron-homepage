@@ -1,0 +1,70 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root{
+  --bg:#07050f;--bg2:#120c22;--accent:#0058ff;--accent2:#8fb1ff;
+  --ink:#f4f2fb;--muted:#9089ad;--line:rgba(143,177,255,.16);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+.site{min-height:100vh;background:
+ radial-gradient(ellipse at 78% 10%,rgba(0,88,255,.20),transparent 45%),
+ linear-gradient(180deg,var(--bg2),var(--bg) 70%)}
+header{position:relative;z-index:20;max-width:1400px;margin:auto;padding:24px 48px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font:700 22px Rajdhani;letter-spacing:.08em}
+.brand-mark{width:34px;height:34px;border:1px solid var(--accent2);display:grid;place-items:center;color:var(--accent2);font:700 21px Rajdhani;clip-path:polygon(50% 0,100% 28%,82% 100%,18% 100%,0 28%)}
+nav{display:flex;align-items:center;gap:28px}
+nav a{font-size:13px;color:var(--muted);transition:.2s}
+nav a:hover,nav a.active{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 20px;border:1px solid var(--line);background:transparent;color:var(--ink);font:600 13px Inter;border-radius:3px;cursor:pointer;transition:.2s}
+.btn:hover{border-color:var(--accent2);transform:translateY(-1px)}
+.btn.primary{background:var(--accent);border-color:var(--accent)}
+.hero{position:relative;min-height:calc(100vh - 82px);overflow:hidden;display:flex;align-items:center}
+.hero:after{content:"";position:absolute;right:-10%;top:-15%;width:55%;height:130%;background:linear-gradient(105deg,transparent 35%,rgba(0,88,255,.55) 36%,rgba(0,88,255,.1) 43%,transparent 44%);filter:blur(1px);pointer-events:none}
+.hero-inner,.page-inner{width:min(1200px,calc(100% - 96px));margin:auto;position:relative;z-index:2}
+.kicker{font:600 14px Rajdhani;color:var(--accent2);letter-spacing:.14em;margin-bottom:14px}
+h1,h2,h3{font-family:Rajdhani,sans-serif}
+h1{font-size:clamp(58px,8vw,104px);line-height:.9}
+.sub{font:600 22px Rajdhani;letter-spacing:.16em;color:var(--muted);margin-top:10px}
+.lead{margin-top:22px;max-width:540px;color:var(--muted);font-size:16px;line-height:1.65}
+.actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.hero-meta{position:absolute;bottom:34px;left:0;right:0;max-width:1200px;margin:auto;border-top:1px solid var(--line);padding-top:20px;display:flex;gap:30px;color:var(--muted);font-size:12px;z-index:3}
+.hero-meta span{padding-left:14px;border-left:2px solid var(--accent)}
+.page{padding:100px 0}
+.page-head{margin-bottom:50px;max-width:720px}
+.page-head h1{font-size:clamp(52px,7vw,84px)}
+.page-head p{color:var(--muted);line-height:1.7;margin-top:18px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);background:rgba(7,5,15,.58);padding:28px;min-height:190px;transition:.25s;position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,88,255,.10),transparent 50%);opacity:0;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:rgba(143,177,255,.4)}
+.card:hover:before{opacity:1}
+.card>*{position:relative;z-index:1}
+.card .num{font:600 12px Rajdhani;color:var(--accent2);letter-spacing:.15em}
+.card h2{font-size:34px;margin:22px 0 10px}
+.card p{color:var(--muted);font-size:14px;line-height:1.6}
+.arrow{margin-top:25px;color:var(--accent2);font-size:13px}
+.team-hero{min-height:520px;display:flex;align-items:center}
+.team-title{font-size:clamp(64px,10vw,130px)}
+.team-tag{color:var(--accent2);font:600 14px Rajdhani;letter-spacing:.18em}
+.status{display:inline-block;margin-top:24px;padding:8px 12px;border:1px solid var(--line);color:var(--muted);font-size:12px}
+.news-list{display:grid;gap:14px}
+.news{display:grid;grid-template-columns:110px 1fr auto;gap:22px;align-items:center;border-top:1px solid var(--line);padding:24px 0}
+.news-date{font:600 13px Rajdhani;color:var(--accent2)}
+.news h2{font-size:26px}
+.news p{color:var(--muted);font-size:13px;margin-top:5px}
+.form{max-width:650px;display:grid;gap:15px}
+.field{background:rgba(7,5,15,.7);border:1px solid var(--line);padding:14px;color:var(--ink);font:14px Inter;outline:none;width:100%}
+textarea.field{min-height:150px;resize:vertical}
+footer{border-top:1px solid var(--line);padding:30px 48px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:20px}
+footer a{margin-left:18px}
+.mobile{display:none}
+@media(max-width:800px){
+ header{padding:20px 22px}.desktop-nav{display:none}.mobile{display:inline-flex}
+ .hero-inner,.page-inner{width:min(100% - 44px,1200px)}
+ .hero-meta{left:22px;right:22px;flex-wrap:wrap}.grid{grid-template-columns:1fr}
+ .page{padding:70px 0}.news{grid-template-columns:1fr;gap:8px}
+ footer{padding:25px 22px;flex-direction:column}
+}
