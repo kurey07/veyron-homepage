@@ -576,6 +576,11 @@ header{
   gap:18px;
 }
 
+.grid-4{
+  grid-template-columns:
+    repeat(4,1fr);
+}
+
 .card{
   position:relative;
 
@@ -1170,7 +1175,8 @@ footer{
     text-align:left;
   }
 
-  .grid{
+  .grid,
+  .grid-4{
     grid-template-columns:1fr;
   }
 
@@ -1581,6 +1587,10 @@ footer{
 
         <a href="https://youtube.com/" target="_blank" rel="noopener">
           YT
+        </a>
+
+        <a href="https://discord.gg/FgZAqGK6Qj" target="_blank" rel="noopener">
+          DC
         </a>
 
       </div>
@@ -2300,7 +2310,7 @@ footer{
   </div>
 
 
-  <div class="grid">
+  <div class="grid grid-4">
 
 
     <!-- CAMBIA LOS ENLACES POR LOS DE VEYRON -->
@@ -2376,6 +2386,33 @@ footer{
 
       <p class="card-text">
         Vídeos y contenido de Veyron.
+      </p>
+
+      <div class="card-link">
+        ABRIR →
+      </div>
+
+    </a>
+
+
+
+    <a
+      class="card social-card"
+      href="https://discord.gg/FgZAqGK6Qj"
+      target="_blank"
+      rel="noopener"
+    >
+
+      <div class="card-number">
+        RED 04
+      </div>
+
+      <div class="social-name">
+        DISCORD
+      </div>
+
+      <p class="card-text">
+        Únete a la comunidad de Veyron.
       </p>
 
       <div class="card-link">
@@ -2527,6 +2564,15 @@ footer{
       rel="noopener"
     >
       YouTube
+    </a>
+
+
+    <a
+      href="https://discord.gg/FgZAqGK6Qj"
+      target="_blank"
+      rel="noopener"
+    >
+      Discord
     </a>
 
   </div>
@@ -2719,4 +2765,3 @@ document
 
 </body>
 </html>
-  
