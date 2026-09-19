@@ -399,11 +399,18 @@ header{
 
 .hero-logo-img{
   display:block;
+
   width:100%;
   max-width:640px;
   height:auto;
+
   mix-blend-mode:screen;
-  filter:drop-shadow(0 0 35px rgba(0,88,255,.35));
+
+  filter:
+    drop-shadow(
+      0 0 35px
+      rgba(0,88,255,.35)
+    );
 }
 
 .hero-sub{
@@ -865,6 +872,90 @@ header{
   font-size:18px;
 
   line-height:1.8;
+}
+
+
+/* =========================
+   TIMELINE (ACHIEVEMENTS / HISTORY)
+========================= */
+
+.timeline{
+  position:relative;
+
+  margin-top:40px;
+
+  padding-left:40px;
+}
+
+.timeline::before{
+  content:"";
+
+  position:absolute;
+
+  left:5px;
+  top:6px;
+  bottom:6px;
+
+  width:1px;
+
+  background:var(--line);
+}
+
+.timeline-item{
+  position:relative;
+
+  padding-bottom:36px;
+}
+
+.timeline-item:last-child{
+  padding-bottom:0;
+}
+
+.timeline-item::before{
+  content:"";
+
+  position:absolute;
+
+  left:-40px;
+  top:6px;
+
+  width:11px;
+  height:11px;
+
+  border-radius:50%;
+
+  background:var(--bg);
+  border:2px solid var(--accent);
+}
+
+.timeline-item.future::before{
+  border-color:var(--line);
+}
+
+.timeline-year{
+  font-family:'Rajdhani',sans-serif;
+
+  color:var(--accent2);
+
+  font-size:13px;
+  font-weight:600;
+
+  letter-spacing:.15em;
+}
+
+.timeline-title{
+  margin-top:6px;
+
+  font-family:'Rajdhani',sans-serif;
+
+  font-size:24px;
+  font-weight:700;
+
+  letter-spacing:.02em;
+}
+
+.timeline-item.future .timeline-title{
+  color:var(--muted);
 }
 
 
@@ -2043,6 +2134,65 @@ footer{
   <br><br>
 
 
+  <div class="page-header" style="margin-bottom:0">
+
+    <div class="kicker">
+      OUR STORY
+    </div>
+
+    <h1 class="page-title" style="font-size:clamp(38px,5vw,56px)">
+      ACHIEVEMENTS &amp; HISTORY
+    </h1>
+
+  </div>
+
+
+  <div class="timeline">
+
+    <!-- Cuando haya un logro nuevo, copia uno de estos
+         bloques y ponlo donde corresponda -->
+
+    <div class="timeline-item">
+
+      <div class="timeline-year">2026</div>
+
+      <div class="timeline-title">VEYRON IS BORN</div>
+
+    </div>
+
+
+    <div class="timeline-item">
+
+      <div class="timeline-year">2026</div>
+
+      <div class="timeline-title">FIRST COMPETITIVE DIVISION</div>
+
+    </div>
+
+
+    <div class="timeline-item">
+
+      <div class="timeline-year">2026</div>
+
+      <div class="timeline-title">FIRST PLAYER SIGNINGS</div>
+
+    </div>
+
+
+    <div class="timeline-item future">
+
+      <div class="timeline-year">2027</div>
+
+      <div class="timeline-title">FIRST MAJOR EVENT</div>
+
+    </div>
+
+  </div>
+
+
+  <br><br><br>
+
+
   <div class="grid">
 
 
@@ -2566,4 +2716,3 @@ document
 
 </body>
 </html>
-  
